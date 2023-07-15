@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic</title>
+    <style>
+        body{
+            background: rgb(red, green, blue);
+            background-image: url('https://imgv3.fotor.com/images/gallery/elegant-lady-with-flowers-in-headband-gray-hair-created-by-fotor-ai-image-generator.png');
+            position: relative;
+            top: 200px;
+            left: 10px;
+        }
+        form{
+            padding: 30px;
+            width: fit-content;
+            border: 2px solid;
+            color: black;
+            background: rgb(red, green, blue);
+            background: linear-gradient(90deg,pink,red,yellow);
+            border-top-left-radius: 5px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 5px;
+        }
+        input{
+            transition: .5s;
+        }
+        form:hover{
+            transform: translate(-20px,20px);
+            box-shadow: 40px 20px 30px #1bf907;
+        }
+        input:hover{
+            box-shadow: -5px 5px 20px rgb(23, 23, 23);
+        }
+
+        h1{
+           border: 2px solid;
+           border-radius: 50%;
+           
+        }
+        </style>
+        
+</head>
+<body>
+    <center>
+
+        <h1><marquee scrollamount="30px" scrolldelay="" behavior="alternate" loop="40">Topic</marquee></h1>
+        <form method="POST">
+            {% csrf_token %}
+
+            {{TMFO.as_p}}
+            <input type="submit" value="Insert">
+        </form>
+    </center>
+</body>
+</html>

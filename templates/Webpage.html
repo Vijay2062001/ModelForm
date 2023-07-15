@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage</title>
+    <style>
+        body{
+            background: rgb(red, green, blue);
+            background: linear-gradient(90deg,pink,blue,red,yellow);
+        }
+        form{
+            padding: 30px;
+            width: fit-content;
+            color: black;
+            border: 2px solid;
+            background-color: white;
+            border-radius: 50%;
+            transition: .6;
+            box-shadow: -300 32 -21 black;
+        }
+        input{
+            transition: .5;
+        }
+        form:hover{
+            transform: translate(-20px,30px);
+            box-shadow: -37 -52 56 pink;
+        }
+        input:hover{
+            box-shadow: -37 -52 56 pink;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Webpage</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {{WMFO.as_p}}
+
+            <input type="submit" value="Webpage">
+        </form>
+
+    </center>
+</body>
+</html>

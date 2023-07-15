@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Access</title>
+    <style>
+        body{
+            background: rgb(red, green, blue);
+            background-image: url('https://media.istockphoto.com/id/1322277517/photo/wild-grass-in-the-mountains-at-sunset.jpg?s=612x612&w=0&k=20&c=6mItwwFFGqKNKEAzv0mv6TaxhLN3zSE43bWmFN--J5w=');
+            position: relative;
+            top: 200px;
+            left: 10px;
+        }
+        form{
+            padding: 30px;
+            width: fit-content;
+            border: 2px solid;
+            color: black;
+            background: rgb(red, green, blue);
+            background: linear-gradient(90deg,pink,red,yellow);
+            border-radius: 75%;
+        }
+        input{
+            transition: .5s;
+        }
+        form:hover{
+            transform: translate(-20px,20px);
+            box-shadow: 40px 20px 30px #1bf907;
+        }
+        input:hover{
+            box-shadow: -5px 5px 20px rgb(23, 23, 23);
+        }    </style>
+
+</head>
+<body>
+    <center>
+        <form method="POST">
+            {% csrf_token %}
+
+            {{ACFO.as_p}}
+            <input type="submit" value="Insert">
+        </form>
+    </center>
+</body>
+</html>
